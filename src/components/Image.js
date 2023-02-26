@@ -20,7 +20,7 @@ const Image = ({ data }) => {
                   </a>
                 </h3>
                 <p className="mt-1 text-sm font-medium text-yellow-600">
-                  {data.created_at.slice(0, 10)}
+                  {new Date(data.created_at).toUTCString()}
                 </p>
               </div>
               <p className="text-sm font-medium text-emerald-500">
