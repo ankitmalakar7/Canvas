@@ -1,5 +1,3 @@
-import { data } from "autoprefixer";
-
 const Image = ({ data }) => {
   return (
     <>
@@ -15,16 +13,18 @@ const Image = ({ data }) => {
             </div>
             <div className="mt-4 flex justify-between">
               <div>
-                <h3 className="text-sm text-gray-700">
+                <h3 className="text-sm font-medium text-violet-600">
                   <a href={data.urls.regular} target="_blank" rel="noreferrer">
                     <span aria-hidden="true" className="absolute inset-0" />
                     {data.user.name}
                   </a>
                 </h3>
-                <p className="mt-1 text-sm text-gray-500">{data.likes}</p>
+                <p className="mt-1 text-sm font-medium text-yellow-600">
+                  {data.created_at.slice(0, 10)}
+                </p>
               </div>
-              <p className="text-sm font-medium text-gray-900">
-                {/* {data.links.download} */}
+              <p className="text-sm font-medium text-emerald-500">
+                {data.likes} 🤍
               </p>
             </div>
           </div>

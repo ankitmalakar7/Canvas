@@ -10,9 +10,8 @@ export const ImageContext = createContext();
 function App() {
   const [searchImage, setSearchImage] = useState("");
   const { response, isLoading, error, fetchData } = useAxios(
-    `search/photos?page=1&query=wallpaper&client_id=${process.env.REACT_APP_ACCESS_KEY}`
+    `search/photos?page=1&query=&client_id=${process.env.REACT_APP_ACCESS_KEY}`
   );
-  console.log(process.env.REACT_APP_ACCESS_KEY);
 
   const value = {
     response,

@@ -19,7 +19,14 @@ const useAxios = (param) => {
       setIsLoading(false);
     }
   };
-
+  // useEffect(() => {
+  //   axios
+  //     .get(param)
+  //     .then((res) => {
+  //       setResponse(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, [param]);
   useEffect(() => {
     fetchData(param);
   }, [param]);
